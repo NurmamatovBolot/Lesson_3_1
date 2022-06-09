@@ -6,12 +6,18 @@ public class Main {
 
     public static void main(String[] args) {
         double [] numbers = {10.0, -2.5, -5.7, 3.1, 4.5, 4.3, -0.6, 4.7, 6.7, -3.5, 1.6, 2.4, 4.5, 2.4, 5.6};
+        double result = 0;
+        int increasing = 0;
+        boolean isItNegativeNumber = false;
         for (double mean : numbers) {
-            d = (numbers[3] + numbers[4] + numbers[5] + numbers[7] + numbers[8] + numbers[10] + numbers[11] + numbers[12] + numbers[13] + numbers[14]) / 10;
-            mean = d;
-            d = mean;
+            if (mean < 0) {
+                isItNegativeNumber = true;
+            } else if (isItNegativeNumber) {
+                increasing++;
+                result = result + mean;
+            }
         }
-        System.out.println(d);
+        System.out.println(result/increasing);
 
         sort();
     }
