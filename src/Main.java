@@ -1,16 +1,17 @@
 import java.util.Arrays;
 
-import static com.sun.tools.javac.jvm.ByteCodes.swap;
-
 public class Main {
+
+    public static double d;
+
     public static void main(String[] args) {
         double [] numbers = {10.0, -2.5, -5.7, 3.1, 4.5, 4.3, -0.6, 4.7, 6.7, -3.5, 1.6, 2.4, 4.5, 2.4, 5.6};
         for (double mean : numbers) {
-            double d = (numbers[3] + numbers[4] + numbers[5]) / 3;
+            d = (numbers[3] + numbers[4] + numbers[5] + numbers[7] + numbers[8] + numbers[10] + numbers[11] + numbers[12] + numbers[13] + numbers[14]) / 10;
             mean = d;
-            System.out.println(mean);
-            break;
+            d = mean;
         }
+        System.out.println(d);
 
         sort();
     }
